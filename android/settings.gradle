@@ -1,0 +1,3 @@
+rootProject.name = 'PrismaApp'
+
+include ':app'
