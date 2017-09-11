@@ -1,11 +1,10 @@
-import {combineReducers} from 'redux'
+import {combineReducers} from 'redux';
 
-// import Navigation from './navigation'
+import home from './home';
+import navReducer from './navigator';
 
-import home from './home'
 
-
-const rootReducer = combineReducers({home});
+const rootReducer = combineReducers({home, nav: navReducer});
 
 
 export default rootReducer;

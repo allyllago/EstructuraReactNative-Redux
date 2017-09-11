@@ -1,9 +1,10 @@
-import PrismaApp from '../../index.android.js'
-import Home from '../Components/home.js'
+import { StackNavigator } from 'react-navigation';
 
+import Home from '../Components/home.js'; 
+import Segunda from '../Components/segunda.js'
+const AppNavigator = StackNavigator ({
+  Home: { screen: Home },
+  Segunda: {screen: Segunda},
+});
 
-const Routes = {
-	Home:{Home}
-}
-
-export default Routes
+export default AppNavigator;

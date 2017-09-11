@@ -1,8 +1,11 @@
 import React from 'react'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import {View, Stylesheet, Text} from 'react-native'
+import {View, Stylesheet, Text, TouchableOpacity} from 'react-native'
 import {actionCreators} from '../Actions/actionCreators'
+import { StackNavigator } from 'react-navigation';
+import Segunda from './segunda.js';
+
 
 function mapStateToProps (state){
 	return {
@@ -18,13 +21,22 @@ class Cuco extends React.Component {
     	super(props);
     }
 componentWillMount (){
-	console.log ("ESTADO", this.state)
 	this.props.show ()
 }
+static navigationOptions = {
+    title: 'Welcome',
+  };
 	render(){
+	console.log ("ESTADO", this.props.home)
+	const { navigate } = this.props.navigation; 
 		return (
 			<View>
 			<Text>ESTO ES LA HOME, PROBANDO NAVIGATION CON REDUX {this.props.home.msg}</Text>
+			<View>
+          	<TouchableOpacity onPress={() => navigate('Segunda')}>
+            	<Text>Vamos a la Segunda</Text>
+          	</TouchableOpacity>
+        </View>
 			</View>
 		)
 	}
