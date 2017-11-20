@@ -5,6 +5,7 @@ import {View, Stylesheet, Text, TouchableOpacity} from 'react-native'
 import {actionCreators} from '../Actions/actionCreators'
 import { StackNavigator } from 'react-navigation';
 import Segunda from './segunda.js';
+import Camara from './camara.js';
 
 
 function mapStateToProps (state){
@@ -35,6 +36,9 @@ static navigationOptions = {
 			<View>
           	<TouchableOpacity onPress={() => navigate('Segunda')}>
             	<Text>Vamos a la Segunda</Text>
+          	</TouchableOpacity>
+          	<TouchableOpacity onPress={() => navigate('Camara')}>
+            	<Text>Vamos a la Camara</Text>
           	</TouchableOpacity>
         </View>
 			</View>
